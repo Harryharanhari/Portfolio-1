@@ -28,26 +28,90 @@ header h1{font-size:3rem;background:linear-gradient(90deg,var(--primary),var(--a
 section{padding:4rem 8%}
 h2{margin-bottom:2rem;color:var(--accent);text-align:center}
 
-.card{background:rgba(17,24,39,.9);padding:2rem;border-radius:15px;margin-bottom:1.5rem;opacity:0;transform:translateY(40px);transition:.6s}
-.card.visible{opacity:1;transform:translateY(0)}
+.card{
+background:rgba(17,24,39,.9);
+padding:2rem;
+border-radius:15px;
+margin-bottom:1.5rem;
+opacity:0;
+transform:translateY(40px);
+transition:all .4s ease;
+border:1px solid rgba(6,182,212,0.15);
+position:relative;
+overflow:hidden;
+}
+
+.card.visible{
+opacity:1;
+transform:translateY(0)
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 0 30px rgba(6,182,212,.6);
+border-color:var(--accent);
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(6,182,212,.25),transparent);
+transition:.7s;
+}
+
+.card:hover::before{
+left:100%;
+}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
 
+/* UPDATED SKILL CARD - SAME AS .card */
 .skill-card{
 background:rgba(17,24,39,.9);
 padding:1.5rem;
 border-radius:12px;
 text-align:center;
-transition:.4s;
+transition:all .4s ease;
 opacity:0;
 transform:translateY(30px);
-border:1px solid rgba(6,182,212,0.2);
+border:1px solid rgba(6,182,212,0.15);
+position:relative;
+overflow:hidden;
 }
-.skill-card.show{opacity:1;transform:translateY(0)}
+
+.skill-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
 .skill-card:hover{
-transform:translateY(-8px) scale(1.05);
-box-shadow:0 0 25px rgba(6,182,212,.7);
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 0 30px rgba(6,182,212,.6);
 border-color:var(--accent);
+}
+
+.skill-card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(6,182,212,.25),
+transparent
+);
+transition:.7s;
+}
+
+.skill-card:hover::before{
+left:100%;
 }
 
 .timeline-item{margin:20px 0;padding-left:20px;border-left:3px solid var(--accent);opacity:0;transform:translateX(-40px);transition:.6s}
@@ -110,13 +174,13 @@ Percentage : 71%<br>
 <section>
 <h2>Projects</h2>
 <div class="card">Prevention of Overloading and Underloading of Railway Wagons - Domain: Internet of Things</div>
-<div class="card">Diabetes Prediction - Domain: Machine Learning</div>
-<div class="card">Multi-Domain AI Resume Analyzer - Domain: AI</div>
-<div class="card">AI Powered PDF Context-Aware Chatbot (RAG System) - Domain: AI</div>
-<div class="card">Customer Segmentation K-Means Clustering using Python - Domain: Data Analytics</div>
-<div class="card">Exploit Development | Stack-Based Buffer Overflow – Brainpan Server - Domain: Cybersecurity & Ethical Hacking</div>
-<div class="card">AI-Based Malware Detection System - Domain: Cybersecurity</div>
-<div class="card">Network Isolation for Organisation using Cisco Packet Tracer - Domain: CCNA</div>
+<div class="card">Diabetes Prediction - Domain: Machine Learning<br> <a href="https://diabets-prediction-with-machine-learning-gjjrlctkmnjpbg4h4et5l.streamlit.app/" target="_blank">View Project</a><br></div>
+<div class="card">Multi-Domain AI Resume Analyzer - Domain: AI<br> <a href="https://aipoweredresumeanalyzer-cctvzfddfgct9bcsevegic.streamlit.app/" target="_blank">View Project</a><br></div>
+<div class="card">AI Powered PDF Context-Aware Chatbot (RAG System) - Domain: AI<br> <a href="https://langchainchatbot-nhqwmsbfhuz3dmrx4odjb9.streamlit.app/" target="_blank">View Project</a><br></div>
+<div class="card">Customer Segmentation K-Means Clustering using Python and  - Domain: Data Analytics<br> <a href="https://github.com/Harryharanhari/Shopping-Mall-Customer-Segmentation-Data-Analytics-Project-.git" target="_blank">View Project</a><br></div>
+<div class="card">Exploit Development | Stack-Based Buffer Overflow – Brainpan Server - Domain: Cybersecurity & Ethical Hacking<br> <a href="https://www.linkedin.com/posts/hari-haran01_oscp-bufferoverflow-exploitdevelopment-activity-7406659918885203968-TsUG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEajTIABM9euHDuLWXeNNK5IKwb52dwXQUQ" target="_blank">View Project</a><br></div>
+<div class="card">AI-Based Malware Detection System - Domain: Cybersecurity<br> <a href="https://ai---based-malware-detection-system-bjptulaeua5krhrlfebcup.streamlit.app/" target="_blank">View Project</a><br></div>
+<div class="card">Network Isolation for Organisation using Cisco Packet Tracer - Domain: CCNA<br> <a href="https://www.linkedin.com/posts/hari-haran01_network-isolation-simulation-cisco-packet-activity-7396900676376829953-bYMc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEajTIABM9euHDuLWXeNNK5IKwb52dwXQUQ" target="_blank">View Project</a><br></div>
 </section>
 
 <section>
